@@ -7,5 +7,9 @@ if you take a good picture you move on to the next level and earn intuition poin
 if you miss the picture you fail the level and have to restart
 
 player can go into camera mode to take a picture but can walk around the scene in normal top-down fashion.
+
+player has photo requests given to them.
+player has to find the requested photo spot using big brain skills.
+player has to take the photo within a certain amount of time.
 */ 
 
