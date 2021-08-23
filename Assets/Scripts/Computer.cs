@@ -23,12 +23,15 @@ public class Computer : MonoBehaviour
     [SerializeField] private bool loggedIn;
     [Header("Wifi Screen")]
     [SerializeField] private TMP_InputField wifiInput;
+    [SerializeField] private TextMeshProUGUI resultText;
+    [SerializeField] private GameObject green;
     [SerializeField] private string passcode;
     [SerializeField] private bool hasInternet;
 
     private void Start()
     {
         computerScreen.SetActive(false);
+        green.SetActive(false);
     }
 
     private void Update()
@@ -104,13 +107,11 @@ public class Computer : MonoBehaviour
         if (loginInput.text == password)
         {
             // logged in to computer
-            print("successful login!");
             loginScreen.SetActive(false);
             loggedIn = true;
         }
         else
         {
-            print("login failed!");
             background.color = fail;
             Invoke("NormalColour", 1);
         }
@@ -125,12 +126,13 @@ public class Computer : MonoBehaviour
     {
         if (wifiInput.text == passcode)
         {
-            print("successful connection!");
+            resultText.text = "Connection Successful!";
             hasInternet = true;
+            green.SetActive(true);
         }
         else
         {
-            print("connection failed!");
+            resultText.text = "Connection Failed!";
         }
     }
 }

@@ -3,16 +3,19 @@ using TMPro;
 /// <summary>
 /// This class controls picking up and reading notes
 /// </summary>
-public class Pickup : MonoBehaviour
+public class Scrambled : MonoBehaviour
 {
     [Header("References")]
     [SerializeField] private Concentration con;
-    [Header("Setup")]
+    [Header("Notes")]
     [SerializeField] private Camera playerCamera;
-    [SerializeField] private float reach;
     [SerializeField] private TextMeshProUGUI dialogue;
+    [SerializeField] private float reach;
     [SerializeField] private string[] jumbledNotes;
     [SerializeField] private string[] notes;
+    [Header("Environment Text")]
+    [SerializeField] private TextMeshPro pressSpaceToBlink;
+    [SerializeField] private TextMeshPro practiceSquatsToday;
 
     private void Update()
     {
@@ -20,6 +23,8 @@ public class Pickup : MonoBehaviour
         {
             ReadNote();
         }
+
+        EnvironmentText();
     }
 
     private void ReadNote()
@@ -38,6 +43,9 @@ public class Pickup : MonoBehaviour
                 case "Note 1":
                     FadeIn(0);
                     break;
+                case "Note 2":
+                    FadeIn(1);
+                    break;
                 default:
                     break;
             }
@@ -54,12 +62,16 @@ public class Pickup : MonoBehaviour
         if (con.concentration <= 50)
         {
             // dialogue will be jumbled
-            dialogue.text = jumbledNotes[index];   
+            dialogue.text = jumbledNotes[index];
+
+            pressSpaceToBlink.text = "sreps esapc to kbiln";
         }
         else
         {
             // else dialogue will be normal
             dialogue.text = notes[index];
+
+            pressSpaceToBlink.text = "press space to blink";
         }
 
         // invoke FadeOut function after 5 seconds
@@ -71,5 +83,20 @@ public class Pickup : MonoBehaviour
     {
         // fades out text over time
         dialogue.CrossFadeAlpha(0, 1, true);    
+    }
+
+    private void EnvironmentText()
+    {
+        // if player isn't concentrating enough
+        if (con.concentration <= 50)
+        {
+            pressSpaceToBlink.text = "sreps esapc to kbiln";
+            practiceSquatsToday.text = "ipeccrta stsauq yo!a!t!!d";
+        }
+        else
+        {
+            pressSpaceToBlink.text = "press space to blink";
+            practiceSquatsToday.text = "practice squats today!!!!";
+        }
     }
 }
