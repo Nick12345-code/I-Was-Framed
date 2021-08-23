@@ -16,7 +16,7 @@ public class Label : MonoBehaviour
     //If your mouse hovers over the GameObject with the script attached, output this message
     private void OnMouseOver()
     {
-        label.text = "Use";
+        label.text = $"{gameObject.name}";
     }
 
     //The mouse is no longer hovering over the GameObject so output this message each frame

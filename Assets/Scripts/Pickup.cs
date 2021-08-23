@@ -35,7 +35,7 @@ public class Pickup : MonoBehaviour
             // if the ray hits an object tagged "Computer"
             switch (hit.collider.name)
             {
-                case "Note1":
+                case "Note 1":
                     FadeIn(0);
                     break;
                 default:

@@ -13,13 +13,18 @@ public class Computer : MonoBehaviour
     [SerializeField] private GameObject computerScreen;
     [SerializeField] private Camera playerCamera;
     [SerializeField] private float reach;
-    [Header("Login")]
+    [Header("Login Screen")]
     [SerializeField] private GameObject loginScreen;
-    [SerializeField] private TMP_InputField inputText;
+    [SerializeField] private TMP_InputField loginInput;
     [SerializeField] private Image background;
     [SerializeField] private Color normal;
     [SerializeField] private Color fail;
     [SerializeField] private string password;
+    [SerializeField] private bool loggedIn;
+    [Header("Wifi Screen")]
+    [SerializeField] private TMP_InputField wifiInput;
+    [SerializeField] private string passcode;
+    [SerializeField] private bool hasInternet;
 
     private void Start()
     {
@@ -39,9 +44,16 @@ public class Computer : MonoBehaviour
             ComputerOff();
         }
 
-        if (Input.GetKeyDown(KeyCode.KeypadEnter))
+        if (Input.GetButtonDown("Submit"))
         {
-            Password(); 
+            if (!loggedIn)
+            {
+                LogIn();  
+            }
+            else
+            {
+                ConnectWifi();
+            }
         }
     }
 
@@ -87,13 +99,14 @@ public class Computer : MonoBehaviour
         Cursor.visible = false;
     }
 
-    private void Password()
+    private void LogIn()
     {
-        if (inputText.text == password)
+        if (loginInput.text == password)
         {
             // logged in to computer
             print("successful login!");
             loginScreen.SetActive(false);
+            loggedIn = true;
         }
         else
         {
@@ -106,5 +119,18 @@ public class Computer : MonoBehaviour
     private void NormalColour()
     {
         background.color = normal;
+    }
+
+    private void ConnectWifi()
+    {
+        if (wifiInput.text == passcode)
+        {
+            print("successful connection!");
+            hasInternet = true;
+        }
+        else
+        {
+            print("connection failed!");
+        }
     }
 }
