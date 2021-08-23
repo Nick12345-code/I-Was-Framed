@@ -70,8 +70,9 @@ public class Computer : MonoBehaviour
         controller.CanMove = false;         // player controller is frozen
         inComputer = true;                  // player is confirmed to be in the computer
 
-        // unlocks and displays cursor
-        Cursor.lockState = CursorLockMode.None; 
+        // unlocks and enables cursor
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
     }
 
     // computer is not being used
@@ -83,6 +84,7 @@ public class Computer : MonoBehaviour
 
         // locks and disables cursor
         Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
 
     private void Password()
