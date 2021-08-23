@@ -5,11 +5,14 @@ using TMPro;
 /// </summary>
 public class Pickup : MonoBehaviour
 {
+    [Header("References")]
+    [SerializeField] private Concentration con;
+    [Header("Setup")]
     [SerializeField] private Camera playerCamera;
     [SerializeField] private float reach;
     [SerializeField] private TextMeshProUGUI dialogue;
-    [SerializeField] private string[] messyNotes;
-    [SerializeField] private string[] neatNotes;
+    [SerializeField] private string[] jumbledNotes;
+    [SerializeField] private string[] notes;
 
     private void Update()
     {
@@ -45,7 +48,16 @@ public class Pickup : MonoBehaviour
     private void FadeIn(int index)
     {
         dialogue.CrossFadeAlpha(1, 1, true);    // fades in text over time
-        dialogue.text = messyNotes[index];      // text displayed depends on array
+
+        if (con.concentration <= 50)
+        {
+            dialogue.text = jumbledNotes[index];    // text displayed depends on array 
+        }
+        else
+        {
+            dialogue.text = notes[index];
+        }
+
         Invoke("FadeOut", 5);                   // invoke FadeOut function after 5 seconds
     }
 

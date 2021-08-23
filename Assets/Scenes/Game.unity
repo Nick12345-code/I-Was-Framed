@@ -1471,11 +1471,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b483e597c020e1458c29e7c59f62397, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  con: {fileID: 1486002579}
   playerCamera: {fileID: 226626476}
   reach: 4
   dialogue: {fileID: 1279359029}
-  messyNotes: []
-  neatNotes: []
+  jumbledNotes:
+  - eht daowsrps is 5r4o6pgmare
+  - 
+  - 
+  notes:
+  - the password is progamer456
+  - 
+  - 
 --- !u!1001 &1125025167
 PrefabInstance:
   m_ObjectHideFlags: 0
