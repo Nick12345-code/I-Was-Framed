@@ -1,15 +1,6 @@
 /* 
-Pitch
-you have to take a picture of someone committing a crime at the right moment
-a short animated scene will play with the player looking on from a far away distance
-there will be many npcs in the scene to make the player really have tolook, as the crime will be subtle
-if you take a good picture you move on to the next level and earn intuition points
-if you miss the picture you fail the level and have to restart
-
-player can go into camera mode to take a picture but can walk around the scene in normal top-down fashion.
-
-player has photo requests given to them.
-player has to find the requested photo spot using big brain skills.
-player has to take the photo within a certain amount of time.
+player is in bed in house and has to manage blinking somehow
+player can go in and out of computer
+player can turn and off music which is coming from the speakers
 */ 
 
