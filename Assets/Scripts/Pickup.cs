@@ -47,23 +47,29 @@ public class Pickup : MonoBehaviour
     // fade in text
     private void FadeIn(int index)
     {
-        dialogue.CrossFadeAlpha(1, 1, true);    // fades in text over time
+        // fades in text over time
+        dialogue.CrossFadeAlpha(1, 1, true);       
 
+        // if player isn't concentrating enough
         if (con.concentration <= 50)
         {
-            dialogue.text = jumbledNotes[index];    // text displayed depends on array 
+            // dialogue will be jumbled
+            dialogue.text = jumbledNotes[index];   
         }
         else
         {
+            // else dialogue will be normal
             dialogue.text = notes[index];
         }
 
-        Invoke("FadeOut", 5);                   // invoke FadeOut function after 5 seconds
+        // invoke FadeOut function after 5 seconds
+        Invoke("FadeOut", 5);                       
     }
 
     // fade out text
     private void FadeOut()
     {
-        dialogue.CrossFadeAlpha(0, 1, true);    // fades out text over time
+        // fades out text over time
+        dialogue.CrossFadeAlpha(0, 1, true);    
     }
 }

@@ -2240,7 +2240,7 @@ MonoBehaviour:
   blink: {fileID: 1521599859}
   concentration: 100
   loseSpeed: 5
-  gainSpeed: 10
+  gainSpeed: 20
   minConcentration: 0
   maxConcentration: 100
   fill: {fileID: 634779238}
