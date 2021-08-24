@@ -1,51 +1,60 @@
 using UnityEngine;
-using System.Collections.Generic;
 using TMPro;
 /// <summary>
-/// This class controls the ingame homework mechanic
+/// This class controls the in-game homework feature
 /// </summary>
 public class Homework : MonoBehaviour
 {
-    [SerializeField] private Dictionary<string, string> Questions = new Dictionary<string, string>();
-    [SerializeField] private TextMeshProUGUI solvedText;
-    [SerializeField] private TMP_InputField[] questions;
-    [SerializeField] private string[] answers;
-    [SerializeField] private int correctAnswers;
-
-    private void Start()
-    {
-        Questions.Add(questions[0].text, answers[0]);
-        Questions.Add(questions[1].text, answers[1]);
-        Questions.Add(questions[2].text, answers[2]);
-        Questions.Add(questions[3].text, answers[3]);
-        Questions.Add(questions[4].text, answers[4]);
-    }
+    [SerializeField] private TextMeshProUGUI solvedText;    // text that displays how many correct answers player has
+    [SerializeField] private TMP_InputField[] questions;    // array of input fields, each holding a question
+    [SerializeField] private string[] answers;              // array of strings, each holding an answer
+    [SerializeField] private bool[] isCorrect;              // array of bools, each representing if a question is solved
+    [SerializeField] private int currentQuestion;           // the index of the current question being answered
+    [SerializeField] private int correctAnswers;            // the number of correctly answered questions
 
     private void Update()
-    {      
-        Check();
+    {
+        CheckAnswer();
     }
 
-    private void CheckAnswer(string answer)
+    /// <summary> If the inputted data of an input field matches the relevant answer, that question becomes solved. </summary>
+    private void CheckAnswer()
     {
-        //return Questions.ContainsKey(answer);
-    }
-
-    public void Check()
-    {
-        solvedText.text = $"{correctAnswers} / 5";
-
-        if (correctAnswers == 5)
+        if (questions[0].text == answers[0] && !isCorrect[0])
         {
-            solvedText.text = "You solved all the questions!";
+            correctAnswers += 1;
+            solvedText.text = correctAnswers.ToString() + " / 5 solved!";
+            questions[0].enabled = false;
+            isCorrect[0] = true;
         }
-        else
+        else if (questions[1].text == answers[1] && !isCorrect[1])
         {
-            switch (Questions.ContainsKey(""))
-            {
-                default:
-                    break;
-            }
+            correctAnswers += 1;
+            solvedText.text = correctAnswers.ToString() + " / 5 solved!";
+            questions[1].enabled = false;
+            isCorrect[1] = true;
         }
+        else if (questions[2].text == answers[2] && !isCorrect[2])
+        {
+            correctAnswers += 1;
+            solvedText.text = correctAnswers.ToString() + " / 5 solved!";
+            questions[2].enabled = false;
+            isCorrect[2] = true;
+        }
+        else if (questions[3].text == answers[3] && !isCorrect[3])
+        {
+            correctAnswers += 1;
+            solvedText.text = correctAnswers.ToString() + " / 5 solved!";
+            questions[3].enabled = false;
+            isCorrect[3] = true;
+        }
+        else if (questions[4].text == answers[4] && !isCorrect[4])
+        {
+            correctAnswers += 1;
+            solvedText.text = correctAnswers.ToString() + " / 5 solved!";
+            questions[4].enabled = false;
+            isCorrect[4] = true;
+        }       
     }
 }
+

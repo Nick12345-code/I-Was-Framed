@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Computer
   - Speaker
+  - Door
   layers:
   - Default
   - TransparentFX
