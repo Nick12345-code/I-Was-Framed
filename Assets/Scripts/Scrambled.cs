@@ -1,7 +1,7 @@
 using UnityEngine;
 using TMPro;
 /// <summary>
-/// This class controls picking up and reading notes
+/// This class controls text
 /// </summary>
 public class Scrambled : MonoBehaviour
 {
