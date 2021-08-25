@@ -6,7 +6,9 @@ using UnityEngine.SceneManagement;
 /// </summary>
 public class Door : MonoBehaviour
 {
+    [Header("References")]
     [SerializeField] private PlayerController controller;
+    [Header("Setup")]
     [SerializeField] private Camera playerCamera;
     [SerializeField] private GameObject doorCode;
     [SerializeField] private TMP_InputField codeInput;

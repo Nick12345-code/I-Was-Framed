@@ -1,5 +1,6 @@
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 /// <summary>
 /// This class controls all global game mechanics such as timers.
 /// </summary>
@@ -20,6 +21,7 @@ public class GameManager : MonoBehaviour
         if (timeLeft <= 0)
         {
             timeLeft = 0;
+            SceneManager.LoadScene("Fail");
         }
         else
         {

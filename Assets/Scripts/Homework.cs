@@ -9,7 +9,6 @@ public class Homework : MonoBehaviour
     [SerializeField] private TMP_InputField[] questions;    // array of input fields, each holding a question
     [SerializeField] private string[] answers;              // array of strings, each holding an answer
     [SerializeField] private bool[] isCorrect;              // array of bools, each representing if a question is solved
-    [SerializeField] private int currentQuestion;           // the index of the current question being answered
     [SerializeField] private int correctAnswers;            // the number of correctly answered questions
 
     private void Update()
