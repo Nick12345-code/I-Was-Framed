@@ -36,6 +36,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private Vector3 standingCenter = new Vector3(0, 0, 0);
     private bool isCrouching;
     private bool duringCrouchAnimation;
+    [Header("Animation")]
+    [SerializeField] private Animator playerAnimation;
 
     private Camera playerCamera;
     private CharacterController controller;
@@ -49,6 +51,9 @@ public class PlayerController : MonoBehaviour
         controller = GetComponent<CharacterController>();
 
         Cursor.lockState = CursorLockMode.Locked;
+
+        playerAnimation.SetFloat("SpeedX", currentInput.x);
+        playerAnimation.SetFloat("SpeedZ", currentInput.z);
     }
 
     private void Update()
@@ -69,6 +74,15 @@ public class PlayerController : MonoBehaviour
             }
 
             Extra();
+
+            if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D))
+            {
+                playerAnimation.Play("Walking");
+            }
+            else
+            {
+                playerAnimation.Play("Idle");
+            }
         }
     }
 

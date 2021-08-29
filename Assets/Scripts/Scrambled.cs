@@ -13,6 +13,7 @@ public class Scrambled : MonoBehaviour
     [SerializeField] private float reach;
     [SerializeField] private string[] jumbledNotes;
     [SerializeField] private string[] notes;
+    [SerializeField] private bool textOnScreen;
     [Header("Environment Text")]
     [SerializeField] private TextMeshPro pressSpaceToBlink;
     [SerializeField] private TextMeshPro practiceSquatsToday;
@@ -21,7 +22,10 @@ public class Scrambled : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            ReadNote();
+            if (!textOnScreen)
+            {
+                ReadNote(); 
+            }
         }
 
         EnvironmentText();
@@ -55,6 +59,8 @@ public class Scrambled : MonoBehaviour
     // fade in text
     private void FadeIn(int index)
     {
+        textOnScreen = true;
+
         // fades in text over time
         dialogue.CrossFadeAlpha(1, 1, true);       
 
@@ -82,7 +88,8 @@ public class Scrambled : MonoBehaviour
     private void FadeOut()
     {
         // fades out text over time
-        dialogue.CrossFadeAlpha(0, 1, true);    
+        dialogue.CrossFadeAlpha(0, 1, true);
+        textOnScreen = false;
     }
 
     private void EnvironmentText()
