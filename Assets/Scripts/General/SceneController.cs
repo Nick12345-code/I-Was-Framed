@@ -5,8 +5,10 @@ using UnityEngine.SceneManagement;
 /// </summary>
 public class SceneController : MonoBehaviour
 {
+    [SerializeField] private PlayerController controller;
+
     public void ChangeScene(string name)
-    {
+    {       
         SceneManager.LoadScene(name);
     }
 }

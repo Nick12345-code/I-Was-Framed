@@ -26,7 +26,7 @@ public class Computer : MonoBehaviour
     [SerializeField] private TextMeshProUGUI resultText;
     [SerializeField] private GameObject green;
     [SerializeField] private string passcode;
-    [SerializeField] private bool hasInternet;
+    public bool hasInternet;
 
     private void Start()
     {

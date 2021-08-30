@@ -1,5 +1,4 @@
 using UnityEngine;
-using TMPro;
 /// <summary>
 /// This class controls the player's blinking mechanic
 /// </summary>
@@ -25,11 +24,6 @@ public class BlinkController : MonoBehaviour
             // blink
             Blinking();
         }
-        else if (isBlinking)
-        {
-            // you are currently blinking
-            print("You are currently blinking!");
-        }
     }
 
     private void Blinking()
@@ -43,6 +37,4 @@ public class BlinkController : MonoBehaviour
     {
         isBlinking = false;             // player has blinked
     }
-
-    // blink doesn't look like a real word now
 }

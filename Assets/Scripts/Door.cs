@@ -69,7 +69,7 @@ public class Door : MonoBehaviour
         if (codeInput.text == code)
         {
             // player escapes
-            SceneManager.LoadScene("End");
+            SceneManager.LoadScene("Win");
         }
         else
         {

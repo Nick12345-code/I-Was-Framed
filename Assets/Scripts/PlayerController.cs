@@ -5,6 +5,9 @@ using UnityEngine;
 /// </summary>
 public class PlayerController : MonoBehaviour
 {
+    /// <summary>
+    /// CanMove allows the player to move if true.
+    /// </summary>
     public bool CanMove { get; set; } = true;
     private bool IsSprinting => canSprint && Input.GetKey(sprintKey);
     private bool ShouldJump => Input.GetKeyDown(jumpKey) && controller.isGrounded;
@@ -45,15 +48,16 @@ public class PlayerController : MonoBehaviour
     private Vector3 moveDirection;
     private Vector3 currentInput;
 
+    private void OnEnable()
+    {
+        CanMove = true;
+    }
+
     private void Awake()
     {
         playerCamera = GetComponentInChildren<Camera>();
         controller = GetComponent<CharacterController>();
-
-        Cursor.lockState = CursorLockMode.Locked;
-
-        playerAnimation.SetFloat("SpeedX", currentInput.x);
-        playerAnimation.SetFloat("SpeedZ", currentInput.z);
+        Cursor.lockState = CursorLockMode.Locked;      
     }
 
     private void Update()
