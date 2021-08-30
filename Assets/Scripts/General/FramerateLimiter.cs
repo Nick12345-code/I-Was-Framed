@@ -1,8 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
-/// <summary>
-/// This class allows the framerate to be limited.
-/// </summary>
+
 public class FramerateLimiter : MonoBehaviour
 {
     [SerializeField] private int target;                // the target framerate
@@ -26,7 +24,10 @@ public class FramerateLimiter : MonoBehaviour
         ChangeFramerate();
     }
 
-    private void ChangeFramerate()
+    /// <summary>
+    /// Allows framerate to change when slider value is changed.
+    /// </summary>
+    public void ChangeFramerate()
     {
         // framerate equals the slider value
         Application.targetFrameRate = (int)framerateSlider.value;

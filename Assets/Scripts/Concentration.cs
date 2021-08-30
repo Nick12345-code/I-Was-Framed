@@ -1,8 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
-/// <summary>
-/// This class controls the concentration of the character
-/// </summary>
+
 public class Concentration : MonoBehaviour
 {
     [Header("References")]

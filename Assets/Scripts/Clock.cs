@@ -1,9 +1,7 @@
 using System.Collections;
 using UnityEngine;
 using TMPro;
-/// <summary>
-/// This class controls the computer clock
-/// </summary>
+
 public class Clock : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI clockText;

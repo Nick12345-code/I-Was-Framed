@@ -1,8 +1,6 @@
 using UnityEngine;
 using TMPro;
-/// <summary>
-/// This class controls text
-/// </summary>
+
 public class Scrambled : MonoBehaviour
 {
     [Header("References")]
@@ -31,6 +29,9 @@ public class Scrambled : MonoBehaviour
         EnvironmentText();
     }
 
+    /// <summary>
+    /// Shows the text of the relevant note when player clicks on it.
+    /// </summary>
     private void ReadNote()
     {
         // stores information on what ray hits

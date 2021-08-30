@@ -1,9 +1,7 @@
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
-/// <summary>
-/// This class controls the ingame computer feature
-/// </summary>
+
 public class Computer : MonoBehaviour
 {
     [Header("References")]

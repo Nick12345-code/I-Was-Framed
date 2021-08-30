@@ -1,7 +1,5 @@
 using UnityEngine;
-/// <summary>
-/// This class controls the player's blinking mechanic
-/// </summary>
+
 public class BlinkController : MonoBehaviour
 {
     public bool isBlinking;

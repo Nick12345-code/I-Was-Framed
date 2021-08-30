@@ -9,8 +9,14 @@ public class PlayerController : MonoBehaviour
     /// CanMove allows the player to move if true.
     /// </summary>
     public bool CanMove { get; set; } = true;
-    private bool IsSprinting => canSprint && Input.GetKey(sprintKey);
-    private bool ShouldJump => Input.GetKeyDown(jumpKey) && controller.isGrounded;
+    /// <summary>
+    /// IsSprinting allows the player to sprint if true.
+    /// </summary>
+    public bool IsSprinting => canSprint && Input.GetKey(sprintKey);
+    /// <summary>
+    /// ShouldJump allows the player to jump if true.
+    /// </summary>
+    public bool ShouldJump => Input.GetKeyDown(jumpKey) && controller.isGrounded;
     private bool ShouldCrouch => Input.GetKeyDown(crouchKey) && !duringCrouchAnimation && controller.isGrounded;
     [Header("Functional Options")]
     [SerializeField] private bool canSprint = true;

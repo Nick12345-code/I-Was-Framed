@@ -1,12 +1,14 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 /// <summary>
-/// This class has a public function which can be called to change scenes
+/// Controls changing scenes.
 /// </summary>
 public class SceneController : MonoBehaviour
 {
-    [SerializeField] private PlayerController controller;
-
+    /// <summary>
+    /// This function loads a scene.
+    /// </summary>
+    /// <param name="name"> The name of the scene being loaded is specified in the inspector. </param>
     public void ChangeScene(string name)
     {       
         SceneManager.LoadScene(name);

@@ -1,9 +1,7 @@
 using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
-/// <summary>
-/// This class controls all global game mechanics such as timers.
-/// </summary>
+
 public class GameManager : MonoBehaviour
 {
     [Header("Timer")]

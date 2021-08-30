@@ -1,7 +1,5 @@
 using UnityEngine;
-/// <summary>
-/// This class controls the door code document
-/// </summary>
+
 public class DoorCode : MonoBehaviour
 {
     [SerializeField] private Computer computer;

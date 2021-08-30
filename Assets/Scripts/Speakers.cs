@@ -1,7 +1,5 @@
 using UnityEngine;
-/// <summary>
-/// This class controls player interaction with the music speakers
-/// </summary>
+
 public class Speakers : MonoBehaviour
 {
     [SerializeField] private Camera playerCamera;

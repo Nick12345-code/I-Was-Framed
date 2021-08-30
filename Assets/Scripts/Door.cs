@@ -1,9 +1,7 @@
 using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
-/// <summary>
-/// This class controls player interaction with the door
-/// </summary>
+
 public class Door : MonoBehaviour
 {
     [Header("References")]

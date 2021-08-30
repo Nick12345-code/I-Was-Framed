@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['gamemanager_0',['GameManager',['../class_game_manager.html',1,'']]]
+  ['frameratelimiter_0',['FramerateLimiter',['../class_framerate_limiter.html',1,'']]]
 ];

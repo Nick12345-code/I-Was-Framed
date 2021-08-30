@@ -1,8 +1,6 @@
 using UnityEngine;
 using TMPro;
-/// <summary>
-/// This class controls the in-game homework feature
-/// </summary>
+
 public class Homework : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI solvedText;    // text that displays how many correct answers player has
@@ -17,7 +15,7 @@ public class Homework : MonoBehaviour
     }
 
     /// <summary> If the inputted data of an input field matches the relevant answer, that question becomes solved. </summary>
-    private void CheckAnswer()
+    public void CheckAnswer()
     {
         if (questions[0].text == answers[0] && !isCorrect[0])
         {
@@ -53,7 +51,7 @@ public class Homework : MonoBehaviour
             solvedText.text = correctAnswers.ToString() + " / 5 solved!";
             questions[4].enabled = false;
             isCorrect[4] = true;
-        }       
+        }
     }
 }
 

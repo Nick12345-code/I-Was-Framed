@@ -1,8 +1,6 @@
 using UnityEngine;
 using TMPro;
-/// <summary>
-/// This class displays the name of attached GameObjects
-/// </summary>
+
 public class Label : MonoBehaviour
 {
     private TextMeshProUGUI label;
