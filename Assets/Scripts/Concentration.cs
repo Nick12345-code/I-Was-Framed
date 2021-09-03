@@ -6,6 +6,7 @@ public class Concentration : MonoBehaviour
     [Header("References")]
     [SerializeField] private BlinkController blink;
     [Header("Setup")]
+    /// <summary> The amount of concentration the player currently has. </summary>
     public float concentration;
     [SerializeField] private float loseSpeed;
     [SerializeField] private float gainSpeed;

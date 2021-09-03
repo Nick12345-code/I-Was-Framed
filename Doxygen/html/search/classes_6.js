@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['label_0',['Label',['../class_label.html',1,'']]]
+  ['playercontroller_0',['PlayerController',['../class_player_controller.html',1,'']]]
 ];

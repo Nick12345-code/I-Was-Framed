@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    /// <summary> Whether the player can move or not. </summary>
     public bool canMove;
     [SerializeField] private float moveSpeed;
     [SerializeField] private float walkSpeed;

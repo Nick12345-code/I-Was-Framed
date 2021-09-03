@@ -14,7 +14,6 @@ public class Scrambled : MonoBehaviour
     [SerializeField] private bool textOnScreen;
     [Header("Environment Text")]
     [SerializeField] private TextMeshPro pressSpaceToBlink;
-    [SerializeField] private TextMeshPro practiceSquatsToday;
 
     private void Update()
     {
@@ -99,12 +98,10 @@ public class Scrambled : MonoBehaviour
         if (con.concentration <= 50)
         {
             pressSpaceToBlink.text = "sreps esapc to kbiln";
-            practiceSquatsToday.text = "ipeccrta stsauq yo!a!t!!d";
         }
         else
         {
             pressSpaceToBlink.text = "press space to blink";
-            practiceSquatsToday.text = "practice squats today!!!!";
         }
     }
 }

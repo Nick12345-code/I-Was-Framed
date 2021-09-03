@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class BlinkController : MonoBehaviour
 {
+    /// <summary> Whether the player is currently blinking or not. </summary>
     public bool isBlinking;
     [SerializeField] private Animator eyes;         
 
