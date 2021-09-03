@@ -44,7 +44,7 @@ public class Door : MonoBehaviour
             // if the ray hits an object tagged "Speaker"
             if (hit.collider.CompareTag("Door"))
             {
-                controller.CanMove = false;
+                controller.canMove = false;
                 inDoor = true;
                 doorCode.SetActive(true);
                 Cursor.lockState = CursorLockMode.None;
@@ -55,7 +55,7 @@ public class Door : MonoBehaviour
 
     private void CloseDoorCode()
     {
-        controller.CanMove = true;
+        controller.canMove = true;
         inDoor = false;
         doorCode.SetActive(false);
         Cursor.lockState = CursorLockMode.Locked;

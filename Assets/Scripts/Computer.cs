@@ -80,7 +80,7 @@ public class Computer : MonoBehaviour
     private void ComputerOn()
     {
         computerScreen.SetActive(true);     // computer screen is enabled
-        controller.CanMove = false;         // player controller is frozen
+        controller.canMove = false;         // player controller is frozen
         inComputer = true;                  // player is confirmed to be in the computer
 
         // unlocks and enables cursor
@@ -92,7 +92,7 @@ public class Computer : MonoBehaviour
     private void ComputerOff()
     {
         computerScreen.SetActive(false);    // computer screen is enabled
-        controller.CanMove = true;          // player controller is frozen
+        controller.canMove = true;          // player controller is frozen
         inComputer = false;                 // player is confirmed to be in the computer
 
         // locks and disables cursor
