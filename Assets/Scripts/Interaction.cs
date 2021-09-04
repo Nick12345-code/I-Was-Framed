@@ -34,7 +34,7 @@ public class Interaction : MonoBehaviour
                     Cursor.lockState = CursorLockMode.None;     // cursor is free
                     Cursor.visible = true;                      // cursor is visible
                     g.SetActive(true);                          // gameobject is activated
-                    interacting = true;                         // bool is true
+                    interacting = true;                         // bool is true                 
                 }
             } 
         }
@@ -49,7 +49,7 @@ public class Interaction : MonoBehaviour
             Cursor.lockState = CursorLockMode.Locked;           // cursor is locked to center of screen
             Cursor.visible = false;                             // cursor is invisible
             g.SetActive(false);                                 // gameobject is deactivated
-            interacting = false;                                // bool is false 
-        }
+            interacting = false;                                // bool is false          
+        }   
     }
 }

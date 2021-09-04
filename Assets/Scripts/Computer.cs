@@ -5,12 +5,9 @@ using UnityEngine.UI;
 public class Computer : MonoBehaviour
 {
     [Header("References")]
-    public PlayerController controller;
+    [SerializeField] private Interaction interaction;
     [Header("Setup")]
-    public bool inComputer;
     [SerializeField] private GameObject computerScreen;
-    [SerializeField] private Camera playerCamera;
-    [SerializeField] private float reach;
     [Header("Login Screen")]
     [SerializeField] private GameObject loginScreen;
     [SerializeField] private TMP_InputField loginInput;
@@ -26,24 +23,10 @@ public class Computer : MonoBehaviour
     [SerializeField] private string passcode;
     public bool hasInternet;
 
-    private void Start()
-    {
-        computerScreen.SetActive(false);
-        green.SetActive(false);
-    }
-
     private void Update()
     {
-        // if left mouse button is clicked and the player is not in the computer 
-        if (Input.GetMouseButtonDown(0) && !inComputer)
-        {
-            // use the computer
-            UseComputer();
-        }
-        else if (Input.GetKeyDown(KeyCode.Escape) && inComputer)
-        {
-            ComputerOff();
-        }
+        interaction.Start("Computer", computerScreen);
+        interaction.Stop(computerScreen);
 
         if (Input.GetButtonDown("Submit"))
         {
@@ -56,48 +39,6 @@ public class Computer : MonoBehaviour
                 ConnectWifi();
             }
         }
-    }
-
-    private void UseComputer()
-    {
-        // stores information on what ray hits
-        RaycastHit hit;
-        // the ray is shot from the center of the screen as player mouse position is locked
-        Ray ray = playerCamera.ScreenPointToRay(Input.mousePosition);
-
-        // ray is casted out at the distance specified by reach
-        if (Physics.Raycast(ray, out hit, reach))
-        {
-            // if the ray hits an object tagged "Computer"
-            if (hit.collider.CompareTag("Computer"))
-            {
-                ComputerOn();
-            }
-        }
-    }
-
-    // computer is being used
-    private void ComputerOn()
-    {
-        computerScreen.SetActive(true);     // computer screen is enabled
-        controller.canMove = false;         // player controller is frozen
-        inComputer = true;                  // player is confirmed to be in the computer
-
-        // unlocks and enables cursor
-        Cursor.lockState = CursorLockMode.None;
-        Cursor.visible = true;
-    }
-
-    // computer is not being used
-    private void ComputerOff()
-    {
-        computerScreen.SetActive(false);    // computer screen is enabled
-        controller.canMove = true;          // player controller is frozen
-        inComputer = false;                 // player is confirmed to be in the computer
-
-        // locks and disables cursor
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
     }
 
     private void LogIn()

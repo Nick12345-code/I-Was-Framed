@@ -8944,7 +8944,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerCamera: {fileID: 226626476}
   music: 0
-  reach: 1
+  reach: 2
   speakers: {fileID: 1675866456}
 --- !u!1 &1822300146
 GameObject:
