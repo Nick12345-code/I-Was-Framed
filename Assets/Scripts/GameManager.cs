@@ -16,17 +16,14 @@ public class GameManager : MonoBehaviour
     private void Timer()
     {
         // if timeLeft is greater than 0
-        if (timeLeft <= 0)
-        {
-            timeLeft = 0;
-            SceneManager.LoadScene("Fail");
-        }
+        if (timeLeft <= 0) SceneManager.LoadScene("Fail");
+
         else
         {
             // timeLeft gradually decreases
             timeLeft -= Time.deltaTime;
             // updates the time display
-            timeText.text = timeLeft.ToString("0"); 
+            timeText.text = timeLeft.ToString("0");
         }
     }
 

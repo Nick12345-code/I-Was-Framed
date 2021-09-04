@@ -5,74 +5,18 @@ using UnityEngine.SceneManagement;
 public class Door : MonoBehaviour
 {
     [Header("References")]
-    [SerializeField] private PlayerController controller;
+    [SerializeField] private Interaction interaction;
     [Header("Setup")]
-    [SerializeField] private Camera playerCamera;
     [SerializeField] private GameObject doorCode;
-    [SerializeField] private TMP_InputField codeInput;
+    [SerializeField] private TMP_InputField input;
     [SerializeField] private string code;
-    [SerializeField] private float reach;
-    [SerializeField] private bool inDoor;
 
     private void Update()
     {
-        if (Input.GetMouseButtonDown(0) && !inDoor)
-        {
-            OpenDoorCode();
-        }
-        else if (Input.GetKeyDown(KeyCode.Escape) && inDoor)
-        {
-            CloseDoorCode();
-        }
+        interaction.Start("Door", doorCode);
 
-        if (Input.GetButtonDown("Submit") && inDoor)
-        {
-            CheckCode();
-        }
+        interaction.Stop(doorCode);
+
+        if (input.text == code) SceneManager.LoadScene("Win");
     }
-
-    private void OpenDoorCode()
-    {
-        // stores information on what ray hits
-        RaycastHit hit;
-        // the ray is shot from the center of the screen as player mouse position is locked
-        Ray ray = playerCamera.ScreenPointToRay(Input.mousePosition);
-
-        // ray is casted out at the distance specified by reach
-        if (Physics.Raycast(ray, out hit, reach))
-        {
-            // if the ray hits an object tagged "Speaker"
-            if (hit.collider.CompareTag("Door"))
-            {
-                controller.canMove = false;
-                inDoor = true;
-                doorCode.SetActive(true);
-                Cursor.lockState = CursorLockMode.None;
-                Cursor.visible = true;               
-            }
-        }   
-    }
-
-    private void CloseDoorCode()
-    {
-        controller.canMove = true;
-        inDoor = false;
-        doorCode.SetActive(false);
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
-    }
-
-    private void CheckCode()
-    {
-        if (codeInput.text == code)
-        {
-            // player escapes
-            SceneManager.LoadScene("Win");
-        }
-        else
-        {
-            // wrong code
-        }
-    }
-
 }

@@ -3,13 +3,13 @@ using UnityEngine;
 public class DoorCode : MonoBehaviour
 {
     [SerializeField] private Computer computer;
-    [SerializeField] private GameObject doorCodeDocument;
+    [SerializeField] private GameObject doorCode;
 
     private void Update()
     {
         if (computer.hasInternet)
         {
-            doorCodeDocument.SetActive(true);
+            doorCode.SetActive(true);
         }
     }
 }

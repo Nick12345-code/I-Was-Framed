@@ -5,14 +5,13 @@ using UnityEngine;
 public class Pause : MonoBehaviour
 {
     [SerializeField] private PlayerController controller;
-    [SerializeField] private Computer computer;
     [SerializeField] private GameObject pauseMenu;
     [SerializeField] private bool paused = false;
 
     private void Update()
     {
-        // if the escape button is pressed and the player isn't in the computer
-        if (Input.GetKeyDown(KeyCode.Escape) && !computer.inComputer)
+        // if the escape button is pressed 
+        if (Input.GetKeyDown(KeyCode.Tab))
         {
             // if game is not paused
             if (paused == false)
