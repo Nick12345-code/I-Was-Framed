@@ -13,6 +13,9 @@ public class GameManager : MonoBehaviour
         Timer();
     }
 
+    /// <summary>
+    /// The countdown timer until the player loses the game.
+    /// </summary>
     private void Timer()
     {
         // if timeLeft is greater than 0

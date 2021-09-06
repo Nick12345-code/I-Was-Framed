@@ -41,6 +41,9 @@ public class Computer : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// logs into the computer.
+    /// </summary>
     private void LogIn()
     {
         if (loginInput.text == password)

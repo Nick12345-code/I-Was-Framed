@@ -1,6 +1,8 @@
 using UnityEngine;
 using UnityEngine.UI;
-
+/// <summary>
+/// This class controls the concentration levels of the player.
+/// </summary>
 public class Concentration : MonoBehaviour
 {
     [Header("References")]

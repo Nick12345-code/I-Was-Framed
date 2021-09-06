@@ -29,7 +29,10 @@ public class PlayerController : MonoBehaviour
             Move(); 
         }
     }
-
+    
+    /// <summary>
+    /// Controls the main movement of the player.
+    /// </summary>
     private void Move()
     {
         float moveZ = Input.GetAxis("Vertical");
