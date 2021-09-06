@@ -10,7 +10,7 @@ public class Pause : MonoBehaviour
 
     private void Update()
     {
-        // if the escape button is pressed 
+        // if the tab button is pressed 
         if (Input.GetKeyDown(KeyCode.Tab))
         {
             // if game is not paused
