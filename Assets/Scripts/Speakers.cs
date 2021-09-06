@@ -37,7 +37,7 @@ public class Speakers : MonoBehaviour
             if (hit.collider.CompareTag("Speaker"))
             {
                 // disables the music
-                speakers.enabled = false;
+                speakers.volume = 0f;
                 music = false;
             }
         }
@@ -57,7 +57,7 @@ public class Speakers : MonoBehaviour
             if (hit.collider.CompareTag("Speaker"))
             {
                 // enables the music
-                speakers.enabled = true;
+                speakers.volume = 0.2f;
                 music = true;
             }
         }
