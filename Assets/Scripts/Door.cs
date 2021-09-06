@@ -14,7 +14,6 @@ public class Door : MonoBehaviour
     private void Update()
     {
         interaction.Start("Door", doorCode);
-
         interaction.Stop(doorCode);
 
         if (input.text == code) SceneManager.LoadScene("Win");

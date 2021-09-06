@@ -30,11 +30,11 @@ public class Interaction : MonoBehaviour
                 // if the ray hits a tagged object
                 if (hit.collider.name == n)
                 {
+                    interacting = true;                         // bool is true                 
                     controller.canMove = false;                 // player can't move
                     Cursor.lockState = CursorLockMode.None;     // cursor is free
                     Cursor.visible = true;                      // cursor is visible
                     g.SetActive(true);                          // gameobject is activated
-                    interacting = true;                         // bool is true                 
                 }
             } 
         }
