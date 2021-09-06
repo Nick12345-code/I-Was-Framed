@@ -3,13 +3,13 @@ using UnityEngine.SceneManagement;
 /// <summary>
 /// Controls changing scenes.
 /// </summary>
-public class SceneController : MonoBehaviour
+public class ChangeScene : MonoBehaviour
 {
     /// <summary>
     /// This function loads a scene.
     /// </summary>
     /// <param name="name"> The name of the scene being loaded is specified in the inspector. </param>
-    public void ChangeScene(string name)
+    public void SwitchScene(string name)
     {       
         SceneManager.LoadScene(name);
     }
