@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="BlinkController">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACYAAAAAAAABAAAAQAAAAAIAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\BlinkController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CameraController">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQQAAAAAAEAAAAAAACAAAAAAAEAAAgAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\CameraController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Clock">
+    <Position X="5.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAEAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Clock.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Computer">
+    <Position X="7.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EBQAgAGAAEAAFAAAAAAAAAgAAAAIABAIBAAAAgCAMAA=</HashCode>
+      <FileName>Assets\Scripts\Computer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Concentration">
+    <Position X="0.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAACAAAAAAAAAgAAACAgAAAAIAAAwAIAAgIAA=</HashCode>
+      <FileName>Assets\Scripts\Concentration.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Door">
+    <Position X="2.25" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAIAAAIBAAAAAAAAAAEAA=</HashCode>
+      <FileName>Assets\Scripts\Door.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DoorCode">
+    <Position X="4" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAEAAAIAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\DoorCode.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameManager">
+    <Position X="11" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAEAAE=</HashCode>
+      <FileName>Assets\Scripts\GameManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ChangeResolution">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACQAAAAgAAABAAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\General\ChangeResolution.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FramerateLimiter">
+    <Position X="5.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQCAAAAAAAAAAAAIAAAAAAAQAAAAAAgAAAAAAAAAEA=</HashCode>
+      <FileName>Assets\Scripts\General\FramerateLimiter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pause">
+    <Position X="7.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAhAAAAAAAEAAAAAEAAAAAAAAAAAAAAAAAAAIAA=</HashCode>
+      <FileName>Assets\Scripts\General\Pause.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Quit">
+    <Position X="11" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\General\Quit.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SceneController">
+    <Position X="4" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgA=</HashCode>
+      <FileName>Assets\Scripts\General\SceneController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Homework">
+    <Position X="0.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAABAAAAAIAAAAAACAAAAAARAAgAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Homework.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Interaction">
+    <Position X="2.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAACAABAEAAAAAAAAAAAAAAAAAIAAAACAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Interaction.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Label">
+    <Position X="4" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAABAAAAAAAAAAEAAAAAAAAAAAAAAQAAA=</HashCode>
+      <FileName>Assets\Scripts\Label.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Notes">
+    <Position X="5.75" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMAA=</HashCode>
+      <FileName>Assets\Scripts\Notes.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PlayerController">
+    <Position X="9.25" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAEKAgAAEABAQAAACAAAgAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\PlayerController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Score">
+    <Position X="11" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACCAAAQAAAAAIAAAAAAAgAAAAAAAABBAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Score.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Scramble">
+    <Position X="9.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAQAAAEAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAgAAA=</HashCode>
+      <FileName>Assets\Scripts\Scramble.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Speakers">
+    <Position X="9.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABQAFAAAAAABAAAAAAAAAAAAAAAAAAAAQAAAACAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Speakers.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

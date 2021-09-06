@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['label_0',['Label',['../class_label.html',1,'']]]
+  ['interaction_0',['Interaction',['../class_interaction.html',1,'']]]
 ];

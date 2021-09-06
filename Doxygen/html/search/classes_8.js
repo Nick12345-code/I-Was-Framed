@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['quit_0',['Quit',['../class_quit.html',1,'']]]
+  ['playercontroller_0',['PlayerController',['../class_player_controller.html',1,'']]]
 ];

@@ -1,5 +1,22 @@
 var searchData=
 [
-  ['door_0',['Door',['../class_door.html',1,'']]],
-  ['doorcode_1',['DoorCode',['../class_door_code.html',1,'']]]
+  ['cameracontroller_0',['CameraController',['../class_camera_controller.html',1,'']]],
+  ['cameracontroller_2ecs_1',['CameraController.cs',['../_camera_controller_8cs.html',1,'']]],
+  ['canmove_2',['canMove',['../class_player_controller.html#a14bb057d727180f87728bd6fe62dffc9',1,'PlayerController']]],
+  ['checkanswer_3',['CheckAnswer',['../class_homework.html#a17b6c361536001e68eefd82cfa8c4016',1,'Homework']]],
+  ['clock_4',['Clock',['../class_clock.html',1,'']]],
+  ['clock_2ecs_5',['Clock.cs',['../_clock_8cs.html',1,'']]],
+  ['clocktext_6',['clockText',['../class_clock.html#a5ceededffcc4933f2ecd19d760090ede',1,'Clock']]],
+  ['code_7',['code',['../class_door.html#a7cb20bbefcb5f2db86e1a191da5e44ad',1,'Door']]],
+  ['computer_8',['Computer',['../class_computer.html',1,'']]],
+  ['computer_9',['computer',['../class_door_code.html#a25c72aa9b9b4d05b2c13323add9a519f',1,'DoorCode']]],
+  ['computer_2ecs_10',['Computer.cs',['../_computer_8cs.html',1,'']]],
+  ['computerscreen_11',['computerScreen',['../class_computer.html#ab268fb6ab7e533c31fad8a19f5934ec1',1,'Computer']]],
+  ['concentrate_12',['concentrate',['../class_scramble.html#a9c2bd11dae9de4e4125a387734f4ff72',1,'Scramble']]],
+  ['concentration_13',['Concentration',['../class_concentration.html',1,'']]],
+  ['concentration_14',['concentration',['../class_concentration.html#a2a89def1ff2e4c5a614ba662fa084cfa',1,'Concentration']]],
+  ['concentration_2ecs_15',['Concentration.cs',['../_concentration_8cs.html',1,'']]],
+  ['connectwifi_16',['ConnectWifi',['../class_computer.html#a53a90cf874ed81d507dc7398a8f1fe21',1,'Computer']]],
+  ['controller_17',['controller',['../class_interaction.html#a6b94663e868c1d767b65d1551c9b4b30',1,'Interaction.controller()'],['../class_player_controller.html#afefcef558683eb0b7260f1f36035789e',1,'PlayerController.controller()']]],
+  ['correctanswers_18',['correctAnswers',['../class_homework.html#a4efe38506ec621516db82733fa0e545b',1,'Homework']]]
 ];
